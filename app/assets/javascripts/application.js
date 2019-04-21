@@ -14,20 +14,3 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-
-cool = 5
-console.log("I like cheese!!!!!!")
-
-$.getJSON( "/songs.json", function( data ) {
-    var items = [];
-    console.log(data[0].name);
-
-    $.each( data, function( key, val ) {
-      items.push( "<li id='" + key + "'>" + val + "</li>" );
-    });
-   
-    $( "<ul/>", {
-      "class": "my-new-list",
-      html: items.join( "" )
-    }).appendTo( "body" );
-  });
