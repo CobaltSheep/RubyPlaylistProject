@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2019_04_15_022033) do
     t.string "name"
     t.string "album"
     t.string "genre"
+    t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
