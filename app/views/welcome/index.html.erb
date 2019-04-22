@@ -2,7 +2,7 @@
         <h3 style="text-align: left;"><strong>Playlists:</strong></h3>
         <div class="grid-container">
         <% @playlists.each do |playlist| %>
-            <div class="grid-item" id="<%= playlist.id %>"><%= playlist.name %><%= link_to 'Edit', edit_playlist_path(playlist) %>  <%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+            <div class="grid-item" id="<%= playlist.id %>"><%= playlist.name %>  <%= link_to 'Edit', edit_playlist_path(playlist) %>  <%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></div>
         <% end %>
         </div>
         <a href="/playlists/new">Create New Playlist</a>

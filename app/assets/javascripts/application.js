@@ -16,8 +16,8 @@
 //= require_tree .
 jQuery(document).ready(function(){
 
-    $(".grid-item").css("background-color","rgba(235, 212, 80)");
-    $(".backbtn").css("background-color","rgba(235, 212, 80)");
+    //$(".grid-item").css("background-color","rgba(235, 212, 80)");
+    //$(".backbtn").css("background-color","rgba(235, 212, 80)");
     $( ".grid-item" ).click(function() {
         var playlistAPI = "/playlists/" + this.id + '.json';
         var node = $(this).append("<table></table>");
