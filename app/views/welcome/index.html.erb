@@ -1,16 +1,12 @@
         <p style="text-align: center;"><strong>Tags</strong></p>
         <p style="text-align: left;"><strong>Playlists:</strong></p>
         <div class="grid-container">
-            <div class="grid-item" id="1">Playlist 1</div>
-            <div class="grid-item" id="2">Playlist 2</div>
-            <div class="grid-item" id="3">Playlist 3</div>
-            <div class="grid-item" id="4">Playlist 4</div>
-            <div class="grid-item" id="5">Playlist 5</div>
-            <div class="grid-item" id="6">Playlist 6</div>
-            <div class="grid-item" id="7">Playlist 7</div>
-            <div class="grid-item" id="8">Playlist 8</div>
-            <div class="grid-item" id="9">Playlist 9</div>
+        <% @playlists.each do |playlist| %>
+            <div class="grid-item" id="<%= playlist.id %>"><%= playlist.name %><%= link_to 'Edit', edit_playlist_path(playlist) %><%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+        <% end %>
         </div>
+        <a href="/playlists/new">Create New Playlist</a>
+
 
 
 

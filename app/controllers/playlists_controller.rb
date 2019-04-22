@@ -7,14 +7,12 @@ class PlaylistsController < ApplicationController
     @playlists = Playlist.all
   end
 
-  def as_json(options={})
-    super(include: {albums: {include: :songs}})
-  end
-
   # GET /playlists/1
   # GET /playlists/1.json
   def show
-    @playlist.to_json( include: :songs )
+    list = Playlist.find(params[:id])
+    render json: list.as_json(include:[:songs])
+#    @playlist.to_json( include: :songs )
   end
 
   # GET /playlists/new
