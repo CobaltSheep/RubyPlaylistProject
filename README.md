@@ -3,7 +3,7 @@ To start the project, make sure you are using at least Rails 5.2.3 and at least 
 
 Make sure you also do: "rake db:reset" to rest database values before you start the server. Once you are ready to start the server, types rails server to turn it on. It will most likely run at localhost:3000. 
 
-I used RVM to get rails setup and I also 
+I used RVM to get rails setup and I also used Homebrew as well as other packages. Might have some conflicts :/
 
 
 -------------
