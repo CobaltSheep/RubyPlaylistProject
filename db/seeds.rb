@@ -9,10 +9,10 @@
 require 'song'
 require 'playlist'
 
-s1 = Song.create(name: 'I like chicken', album: 'Chicken Tales', genre: 'Chicken Music', url: "https://www.w3schools.com/tags/horse.ogg")
-s2 = Song.create(name: 'I like beef', album: 'Beef Tales', genre: 'Beef Music', url: "https://www.w3schools.com/tags/horse.ogg")
-s3 = Song.create(name: 'Meeting People', album: 'Sup My Dude', genre: 'Talking-Bout-Stuff', url: "https://www.w3schools.com/tags/horse.ogg")
-s4 = Song.create(name: 'Sequential Learning', album: 'Maths', genre: 'Math Tunes', url: "https://www.w3schools.com/tags/horse.ogg")
+s1 = Song.create(name: 'I like chicken', album: 'Chicken Tales', genre: 'Chicken Music', url: "https://www.thesoundarchive.com/starwars/star-wars-theme-song.mp3")
+s2 = Song.create(name: 'I like beef', album: 'Beef Tales', genre: 'Beef Music', url: "https://www.thesoundarchive.com/starwars/star-wars-cantina-song.mp3")
+s3 = Song.create(name: 'Meeting People', album: 'Sup My Dude', genre: 'Talking-Bout-Stuff', url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3")
+s4 = Song.create(name: 'Sequential Learning', album: 'Maths', genre: 'Math Tunes', url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3")
 s5 = Song.create(name: 'Code is Lame!', album: 'Emo 2020', genre: 'Coding Sucks!', url: "https://www.w3schools.com/tags/horse.ogg")
 
 

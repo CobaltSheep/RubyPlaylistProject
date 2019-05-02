@@ -20,16 +20,13 @@ jQuery(document).ready(function(){
     //$(".backbtn").css("background-color","rgba(235, 212, 80)");
     $( ".grid-item" ).click(function() {
         var playlistAPI = "/playlists/" + this.id + '.json';
-        var node = $(this).append("<table></table>");
-        node.append("<tr></tr>").append("<th>Name</th>").append("<th>Album</th>").append("<th>Genre</th>")
+        var node = $(this).find("div").html("<table></table>");
+        node.append("<br><tr></tr>").append("<th>Name</th>").append("<th>Album</th>").append("<th>Genre</th>")
         $.getJSON( playlistAPI, function( data ) {
             console.log(data.songs);
+            
             $.each( data.songs, function( i, song ) {
-                node.append("<tr class='song'></tr>").append('<td>' + "'" + song.name + "'" + '</td>' + '<td>' + song.album + '</td>' + '<td>' + song.genre + '</td>' + '</tr>')
-                node.click(function() {
-                    var a = new Audio(song.url);
-                    a.play();
-                })
+                node.append("<tr class='song'></tr>").append('<td>' + "'" + song.name + "'" + '</td>' + '<td>' + song.album + '</td>' + '<td>' + song.genre + '</td><td><audio controls><source src="' + song.url + '" type="audio/mpeg"></audio></td></tr>')
             });
         });
         //var a = new Audio(url);
